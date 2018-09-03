@@ -1,7 +1,9 @@
+/*{% load static from staticfiles %}*/
 body {
   display: block;
   background-color: #0f121f;
-  background-image: url("{% static 'image/stars.png' %}");
+  /*background-image: url("{% static 'image/stars.png' %}");*/
+  background-image: url("../image/stars.png");
   background-repeat: no-repeat;
   color: white;
   font-family: "FRIZQT";
@@ -58,13 +60,15 @@ body {
 
 @font-face {
   font-family: "FRIZQT";
-  src: url("{% static 'font/FRIZQT__.TTF' %}") format("truetype");
+  /*src: url("{% static 'font/FRIZQT__.TTF' %}") format("truetype");*/
+  src: url("../font/FRIZQT__.TTF") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Abaddon";
-  src: url("{% static 'font/Abaddon.ttf' %}") format("truetype");
+  /*src: url("{% static 'font/Abaddon.ttf' %}") format("truetype");*/
+  src: url("../font/Abaddon.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
