@@ -1,7 +1,7 @@
 body {
   display: block;
   background-color: #0f121f;
-  background-image: url("stars.png");
+  background-image: url("{% static 'image/stars.png' %}");
   background-repeat: no-repeat;
   color: white;
   font-family: "FRIZQT";
@@ -58,13 +58,13 @@ body {
 
 @font-face {
   font-family: "FRIZQT";
-  src: url("font_pack/FRIZQT__.TTF") format("truetype");
+  src: url("{% static 'font/FRIZQT__.TTF' %}") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Abaddon";
-  src: url("font_pack/Abaddon.ttf") format("truetype");
+  src: url("{% static 'font/Abaddon.ttf' %}") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
