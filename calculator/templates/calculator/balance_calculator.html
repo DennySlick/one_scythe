@@ -70,26 +70,12 @@
 			<form id="points-calculator" class="teams-view" name="test" method="post" action="">
 				<div class="team-players">
 					<p class="team-name"><b>Team 1</b><br>
+          {% for i in range(5) %}
 					<p>
 						<input class="nickname-field" type="text" size="25" placeholder="nickname" maxlength=25>
 						<input class="points-field" type="number" size="25" placeholder=1000>
 					</p>
-					<p>
-						<input class="nickname-field" type="text" size="25" placeholder="nickname" maxlength=25>
-						<input class="points-field" type="number" size="25" placeholder=1000>
-					</p>
-					<p>
-						<input class="nickname-field" type="text" size="25" placeholder="nickname" maxlength=25>
-						<input class="points-field" type="number" size="25" placeholder=1000>
-					</p>
-					<p>
-						<input class="nickname-field" type="text" size="25" placeholder="nickname" maxlength=25>
-						<input class="points-field" type="number" size="25" placeholder=1000>
-					</p>
-					<p>
-						<input class="nickname-field" type="text" size="25" placeholder="nickname" maxlength=25>
-						<input class="points-field" type="number" size="25" placeholder=1000>
-					</p>
+          {% endfor %}
 				</div>
 				<h2 class="versus-field">Versus</h2>
 				<div class="team-players">
