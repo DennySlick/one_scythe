@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def balance_calculator(request):
+    return render(request, 'calculator/balance_calculator.html', {})

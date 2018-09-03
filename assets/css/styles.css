@@ -1,0 +1,70 @@
+body {
+  display: block;
+  background-color: #0f121f;
+  background-image: url("stars.png");
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "FRIZQT";
+}
+
+.wrapper{
+  max-width: 960;
+  margin: 0 auto;
+}
+
+.header{
+  margin: 20px 20px 0px 20px;
+}
+
+.module-header{
+  margin: 20px 20px 0px 20px;
+  padding: 20px 20px 0px 20px;
+  text-transform: capitalize;
+  font-size: 28px;
+  font-family: "Abaddon";
+}
+
+.team-players {
+  display: block;
+  padding: 20px 0;
+  border: 1px solid #00dba0;
+  padding: 20px;
+  margin: 20px;
+}
+
+.teams-view {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  padding: 20px;
+  margin: 20px;
+}
+
+.versus-field {
+  display: block;
+  border: 1px solid black;
+  padding: 20px;
+  padding-top: 120px;
+  margin: 20px;
+  text-align: center;
+  border-style: none;
+}
+
+.navigation-buttons {
+  border: 1px solid #00dba0;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+@font-face {
+  font-family: "FRIZQT";
+  src: url("font_pack/FRIZQT__.TTF") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Abaddon";
+  src: url("font_pack/Abaddon.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
