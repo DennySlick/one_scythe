@@ -19,6 +19,20 @@ class Game {
 		this.avg[0] = Math.round(this.sum[0] / groupsVol);
 		this.avg[1] = Math.round(this.sum[1] / groupsVol);
 	}
+
+	/*get fullGame(){
+		var players1 = [];
+		var players2 = [];
+		var groupsVol = 5;
+		for (var i = 0; i < groupsVol; i++){
+
+		}
+		*/
+	}
+}
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
 function div(val, by) {
