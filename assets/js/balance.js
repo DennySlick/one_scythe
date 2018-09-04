@@ -27,8 +27,9 @@ class Game {
 		for (var i = 0; i < groupsVol; i++){
 
 		}
-		*/
+
 	}
+	*/
 }
 
 function getRandomArbitrary(min, max) {

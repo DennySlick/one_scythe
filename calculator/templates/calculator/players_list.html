@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>Players List</h1>
+<div class="players-info-list">
+  {% for player in players %}
+    <div class="player-info">
+      <p class="player-nickname">
+        {{player.nickname}}
+      </p>
+      <p class="player-pts">
+        {{player.pts}}
+      </p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load static from staticfiles %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>One Scythe League</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'image/green_double_scythe_72.png' %}">
+    <link rel="shortcut icon" href="{% static 'image/green_double_scythe_72.ico' %}" type="image/x-icon">
+  </head>
+
+	<body>
+		<h1 class="header"><a href="{% url 'home' %}"><img src="{% static 'image/one_scythe_league_62.png' %}"></a></h1>
+    <div class="wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

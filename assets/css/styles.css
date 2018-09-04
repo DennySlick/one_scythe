@@ -1,17 +1,43 @@
-/*{% load static from staticfiles %}*/
+
 body {
   display: block;
   background-color: #0f121f;
-  /*background-image: url("{% static 'image/stars.png' %}");*/
   background-image: url("../image/stars.png");
   background-repeat: no-repeat;
   color: white;
   font-family: "FRIZQT";
 }
 
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
 .wrapper{
-  max-width: 960;
-  margin: 0 auto;
+  max-width: 1280px;
+  margin: auto;
+  text-align: left;
+  border: 1px none #00dba0;
+}
+
+.wrapper > h1, h2{
+  text-align: center;
+  font-family: "Abaddon";
+  padding-bottom: 40px;
+  text-transform: capitalize;
+
+}
+
+.wrapper > h1{
+  font-size: 2.2em;
+  text-shadow: #00dba0 0 0 5px;
+}
+
+.wrapper > h2{
+  font-size: 1.8em;
+  margin: 20px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+  text-shadow: #00dba0 0 0 3px;
 }
 
 .header{
@@ -19,11 +45,9 @@ body {
 }
 
 .module-header{
-  margin: 20px 20px 0px 20px;
-  padding: 20px 20px 0px 20px;
-  text-transform: capitalize;
-  font-size: 28px;
-  font-family: "Abaddon";
+  /*margin: 20px 20px 0px 20px;*/
+  /*padding: 20px 20px 0px 20px;*/
+  /*font-size: 28px;*/
 }
 
 .team-players {
@@ -49,6 +73,7 @@ body {
   margin: 20px;
   text-align: center;
   border-style: none;
+  font-size: 1.6em;
 }
 
 .navigation-buttons {
@@ -57,17 +82,66 @@ body {
   margin: 20px;
 }
 
+.main-page-menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding: 50px 150px;
+}
+
+.main-page-elem {
+  border: 2px solid #00dba0;
+  border-radius: 30px;
+  background-color: #009970;
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.players-info-list, .games-info-list{
+  margin: 50px 100px;
+  display: block;
+}
+
+.player-info, .game-info{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border: 1px solid #00dba0;
+  padding: 0px 20px;
+  margin: 10px;
+}
+
+.game-name, .game-date{
+  text-align: left;
+  border: 1px none #00dba0;
+}
+
+.player-nickname{
+  text-align: left;
+  border: 1px none #00dba0;
+}
+
+.player-pts{
+  text-align: center;
+  border: 1px none #00dba0;
+}
+
+#test{
+  font-size: 62px;
+  font-style: none;
+  text-shadow: #00dba0 0 0 10px;
+  background-color: #000;
+}
 
 @font-face {
   font-family: "FRIZQT";
-  /*src: url("{% static 'font/FRIZQT__.TTF' %}") format("truetype");*/
   src: url("../font/FRIZQT__.TTF") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Abaddon";
-  /*src: url("{% static 'font/Abaddon.ttf' %}") format("truetype");*/
   src: url("../font/Abaddon.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;

@@ -1,0 +1,22 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>Main Page</h1>
+<div class="main-page-menu">
+  <a href="{% url 'calculator:players_list' %}">
+    <div class="main-page-elem"
+      <h2 class="main-page-elem-title"> Players </h2>
+    </div>
+  </a>
+  <a href="{% url 'calculator:games_list' %}">
+    <div class="main-page-elem"
+      <h2 class="main-page-elem-title"> Games </h2>
+    </div>
+  </a>
+  <a href="{% url 'calculator:balance_calculator' %}">
+    <div class="main-page-elem"
+      <h2 class="main-page-elem-title"> Calculator </h2>
+    </div>
+  </a>
+</div>
+{% endblock %}
