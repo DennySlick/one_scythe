@@ -54,7 +54,7 @@ ROOT_URLCONF = 'one_scythe.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates', 'one_scythe/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
