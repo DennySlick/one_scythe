@@ -13,6 +13,11 @@ a, a:hover, a:visited{
     text-decoration: none;
 }
 
+a:hover div{
+  background-color: #00dba0;
+  border: 1px solid #009970;
+}
+
 .wrapper{
   max-width: 1280px;
   margin: auto;
@@ -41,7 +46,9 @@ a, a:hover, a:visited{
 }
 
 .header{
-  margin: 20px 20px 0px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 20px 40px 20px;
 }
 
 .module-header{
@@ -76,11 +83,36 @@ a, a:hover, a:visited{
   font-size: 1.6em;
 }
 
-.navigation-buttons {
+.navigation-buttons-menu {
   border: 1px solid #00dba0;
   padding: 20px;
   margin: 20px;
 }
+
+.navigation-button {
+  background-color: #009970;
+  border-radius: 10px;
+  border: 2px solid #00dba0;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9em;
+  margin: 0px 10px;
+  padding: 5px 15px;
+  box-shadow: 2px 2px #00dba0;
+}
+
+.navigation-button:hover {
+  background-color: #00dba0;
+  border: 2px solid #009970;
+  box-shadow: 2px 2px #009970;
+}
+
+.navigation-button:active {
+    background-color: #009970;
+    border: 2px solid #00dba0;
+    box-shadow: none;
+    transform: translateY(2px);
+  }
 
 .main-page-menu{
     display: grid;
@@ -94,9 +126,16 @@ a, a:hover, a:visited{
   border-radius: 30px;
   background-color: #009970;
   position: relative;
-  padding: 40px;
+  padding: 40px 40px 20px 40px;
   text-align: center;
-  font-size: 32px;
+  font-size: 1.8em;
+  font-family: "Folkard";
+  text-shadow: #0f121f 0px 10px 10px;
+}
+
+a .main-page-elem:hover {
+  background-color: #00dba0;
+  border: 2px solid #009970;
 }
 
 .players-info-list, .games-info-list{
@@ -143,6 +182,12 @@ a, a:hover, a:visited{
 @font-face {
   font-family: "Abaddon";
   src: url("../font/Abaddon.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Folkard";
+  src: url("../font/folkard_.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }

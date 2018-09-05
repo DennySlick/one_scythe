@@ -20,6 +20,7 @@ class Game(models.Model):
         'GameMode',
         on_delete=models.CASCADE,
     )
+    players = models.ManyToManyField(Player, related_name='games')
 
     def __str__(self):
         return (str(self.mode) + " #" + str(self.id))

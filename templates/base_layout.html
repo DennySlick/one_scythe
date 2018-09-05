@@ -10,8 +10,15 @@
   </head>
 
 	<body>
-		<h1 class="header"><a href="{% url 'home' %}"><img src="{% static 'image/one_scythe_league_62.png' %}"></a></h1>
     <div class="wrapper">
+			<div class="header">
+					<a href="{% url 'home' %}">
+						<img src="{% static 'image/one_scythe_league_62.png' %}">
+					</a>
+				<div class="top-menu">
+
+				</div>
+			</div>
       {% block content %}
       {% endblock %}
     </div>

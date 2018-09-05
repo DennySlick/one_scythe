@@ -4,14 +4,16 @@
 <h1>Games List</h1>
 <div class="games-info-list">
   {% for game in games %}
-    <div class="game-info">
-      <p class="game-name">
-        {{game}}
-      </p>
-      <p class="game-date">
-        {{game.date}}
-      </p>
-    </div>
+    <a href="{% url 'calculator:game_detail' pk=game.pk %}">
+      <div class="game-info">
+        <p class="game-name">
+          {{game}}
+        </p>
+        <p class="game-date">
+          {{game.date}}
+        </p>
+      </div>
+    </a>
   {% endfor %}
 </div>
 {% endblock %}

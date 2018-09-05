@@ -1,0 +1,32 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <h1>Game details</h1>
+  <div class="games-info-list">
+    <div class="game-info">
+      <p class="game-nickname">
+        {{game}}
+      </p>
+      <p class="game-date">
+        {{game.date}}
+      </p>
+    </div>
+  </div>
+
+
+  <h2>Competitors</h2>
+  <div class="players-info-list">
+    {% for player in game.players.all %}
+      <a href="{% url 'calculator:player_detail' pk=player.pk %}">
+        <div class="player-info">
+          <p class="player-nickname">
+            {{player.nickname}}
+          </p>
+          <p class="game-date">
+            {{player.pts}}
+          </p>
+        </div>
+      </a>
+    {% endfor %}
+
+{% endblock %}
