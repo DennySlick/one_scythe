@@ -13,20 +13,39 @@
     </div>
   </div>
 
+  <h2>
+    Winner: {{game.winner}}
+  </h2>
 
-  <h2>Competitors</h2>
-  <div class="players-info-list">
-    {% for player in game.players.all %}
-      <a href="{% url 'calculator:player_detail' pk=player.pk %}">
-        <div class="player-info">
+  <div class="player-in-game-info-list">
+    {% regroup game.playeringame_set.all   by side as sides %}
+    {% for side in sides %}
+      <h2>
+        {{ side.grouper }}
+      </h2>
+      {% for player_info in side.list %}
+      <a href="{% url 'calculator:player_detail' pk=player_info.player.pk %}">
+        <div class="player-in-game-info">
           <p class="player-nickname">
-            {{player.nickname}}
+            {{player_info.player.nickname}}
           </p>
-          <p class="game-date">
-            {{player.pts}}
+          <p class="player-in-game-elem">
+            {{player_info.pts_start}}
+          </p>
+          <p class="player-in-game-elem">
+            {% if game.winner == side.grouper %}
+              +{{player_info.pts_dif}}
+            {% elif game.winner != 'Draw' %}
+              -{{player_info.pts_dif}}
+            {% else %}
+              0
+            {% endif %}
           </p>
         </div>
       </a>
+      {% empty %}
+        no players exist
+      {% endfor %}
     {% endfor %}
 
 {% endblock %}

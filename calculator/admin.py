@@ -1,19 +1,21 @@
 from django.contrib import admin
 
+from .models import Player, GameMode, Game, PlayerInGame
 
-from .models import Player, GameMode, Game
-from .forms import PlayerAdminForm
+class PlayerInGameInline(admin.TabularInline):
+    model = PlayerInGame
+    extra = 0
+    exclude = ['pts_start', 'pts_dif']
 
 class GameAdmin(admin.ModelAdmin):
-    filter_horizontal = ('players',)
+    inlines = (PlayerInGameInline,)
 
 class PlayerAdmin(admin.ModelAdmin):
-    form = PlayerAdminForm
+    inlines = (PlayerInGameInline,)
     list_display = ('nickname', 'pts')
+
 
 admin.site.register(Player, PlayerAdmin)
 admin.site.register(GameMode)
 admin.site.register(Game, GameAdmin)
-
-
-##########################test
+admin.site.register(PlayerInGame)

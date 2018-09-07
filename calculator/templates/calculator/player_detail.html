@@ -13,20 +13,34 @@
     </div>
   </div>
 
-
   <h2>Player's Games List</h2>
-  <div class="games-info-list">
-    {% for game in player.games.all %}
-      <a href="{% url 'calculator:game_detail' pk=game.pk %}">
-        <div class="game-info">
+  <div class="player-in-game-info-list">
+    {% for game_info in player.playeringame_set.all %}
+      <a href="{% url 'calculator:game_detail' pk=game_info.game.pk %}">
+        <div class="player-in-game-info">
           <p class="game-name">
-            {{game}}
+            {{game_info.game}}
+          </p>
+          <p class="game-name">
+            {{game_info.pts_start}}
+          </p>
+          <p class="player-in-game-elem">
+            {% if game_info.side == game_info.game.winner %}
+              +{{ game_info.pts_dif }}
+            {% elif game_info.game.winner == 'Draw' %}
+              0
+            {% else %}
+              -{{ game_info.pts_dif }}
+            {% endif %}
           </p>
           <p class="game-date">
-            {{game.date}}
+            {{game_info.game.date}}
           </p>
         </div>
       </a>
+    {% empty %}
+      no games exist yet
     {% endfor %}
+  </div>
 
 {% endblock %}

@@ -35,3 +35,36 @@ class PlayerAdminForm(forms.ModelForm):
             self.save_m2m()
 
         return player
+
+
+class GameAdminForm(forms.ModelForm):
+    players = forms.ModelMultipleChoiceField(
+        queryset=Player.objects.all(),
+        required=False,
+        widget=FilteredSelectMultiple(
+            verbose_name=_('Players'),
+            is_stacked=False
+        )
+    )
+
+    class Meta:
+        model = Game
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super(GameAdminForm, self).__init__(*args, **kwargs)
+
+        if self.instance and self.instance.pk:
+            self.fields['players'].initial = self.instance.games.all()
+
+    def save(self, commit=True):
+        game = super(GameAdminForm, self).save(commit=False)
+
+        if commit:
+            game.save()
+
+        if game.pk:
+            game.players = self.cleaned_data['players']
+            self.save_m2m()
+
+        return game

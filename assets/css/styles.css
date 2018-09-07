@@ -28,7 +28,8 @@ a:hover div{
 .wrapper > h1, h2{
   text-align: center;
   font-family: "Abaddon";
-  padding-bottom: 40px;
+  padding-bottom: 10px;
+  padding-top: 20px;
   text-transform: capitalize;
 
 }
@@ -36,6 +37,7 @@ a:hover div{
 .wrapper > h1{
   font-size: 2.2em;
   text-shadow: #00dba0 0 0 5px;
+  padding-bottom: 40px;
 }
 
 .wrapper > h2{
@@ -138,12 +140,12 @@ a .main-page-elem:hover {
   border: 2px solid #009970;
 }
 
-.players-info-list, .games-info-list{
-  margin: 50px 100px;
+.players-info-list, .games-info-list, .player-in-game-info-list {
+  margin: 20px 100px 20px 100px;
   display: block;
 }
 
-.player-info, .game-info{
+.player-info, .game-info, .player-in-game-info {
   display: grid;
   grid-template-columns: 3fr 1fr;
   border: 1px solid #00dba0;
@@ -151,8 +153,22 @@ a .main-page-elem:hover {
   margin: 10px;
 }
 
-.game-name, .game-date{
+.player-in-game-info {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.player-in-game-elem {
+  text-align: center;
+  border: 1px none #00dba0;
+}
+
+.game-name {
   text-align: left;
+  border: 1px none #00dba0;
+}
+
+.game-date{
+  text-align: right;
   border: 1px none #00dba0;
 }
 
@@ -166,7 +182,7 @@ a .main-page-elem:hover {
   border: 1px none #00dba0;
 }
 
-#test{
+#logo-title-prototype{
   font-size: 62px;
   font-style: none;
   text-shadow: #00dba0 0 0 10px;
