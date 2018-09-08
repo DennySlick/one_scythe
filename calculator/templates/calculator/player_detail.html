@@ -30,7 +30,7 @@
             {% elif game_info.game.winner == 'Draw' %}
               0
             {% else %}
-              -{{ game_info.pts_dif }}
+              {{ game_info.pts_dif }}
             {% endif %}
           </p>
           <p class="game-date">
@@ -39,7 +39,11 @@
         </div>
       </a>
     {% empty %}
-      no games exist yet
+      <div class="game-info">
+        <p class="game-name">
+          no games exist yet
+        </p>
+      </div>
     {% endfor %}
   </div>
 

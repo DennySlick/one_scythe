@@ -90,6 +90,10 @@ ENV/
 myvenv/
 MYENV/
 
+# db
+db.sqlite3
+.DS_Store
+
 # Spyder project settings
 .spyderproject
 .spyproject

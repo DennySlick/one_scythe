@@ -14,6 +14,12 @@
         </p>
       </div>
     </a>
+  {% empty %}
+    <div class="game-info">
+      <p class="game-name">
+        no games exist
+      </p>
+    </div>
   {% endfor %}
 </div>
 {% endblock %}

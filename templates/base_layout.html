@@ -12,15 +12,35 @@
 	<body>
     <div class="wrapper">
 			<div class="header">
+				<div class="logo">
 					<a href="{% url 'home' %}">
 						<img src="{% static 'image/one_scythe_league_62.png' %}">
 					</a>
-				<div class="top-menu">
-
 				</div>
+
+				<ul class="top-menu">
+					<a href="{% url 'calculator:players_list' %}">
+				    <li class="top-menu-elem">
+				      Players
+				    </li>
+				  </a>
+					<a href="{% url 'calculator:games_list' %}">
+						<li class="top-menu-elem">
+							Games
+						</li>
+					</a>
+					<a href="{% url 'calculator:balance_calculator' %}">
+						<li class="top-menu-elem">
+							Calculator
+						</li>
+					</a>
+				</ul>
+
 			</div>
-      {% block content %}
-      {% endblock %}
+			<div class="content">
+	      {% block content %}
+	      {% endblock %}
+			</div>
     </div>
   </body>
 </html>

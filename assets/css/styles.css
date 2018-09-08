@@ -22,25 +22,32 @@ a:hover div{
   max-width: 1280px;
   margin: auto;
   text-align: left;
-  border: 1px none #00dba0;
+
+  border: 1px none #fff;
 }
 
-.wrapper > h1, h2{
+.content{
+  border: 1px none #fff;
+}
+
+
+.content > h1, h2{
   text-align: center;
   font-family: "Abaddon";
   padding-bottom: 10px;
   padding-top: 20px;
   text-transform: capitalize;
 
+  border: 1px none #fff;
 }
 
-.wrapper > h1{
+.content > h1{
   font-size: 2.2em;
   text-shadow: #00dba0 0 0 5px;
   padding-bottom: 40px;
 }
 
-.wrapper > h2{
+.content > h2{
   font-size: 1.8em;
   margin: 20px 0px 0px 0px;
   padding: 20px 0px 0px 0px;
@@ -49,8 +56,39 @@ a:hover div{
 
 .header{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   margin: 20px 20px 40px 20px;
+
+  border: 1px none #fff;
+}
+
+.logo{
+  border: 1px none #fff;
+}
+
+.top-menu{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style-type: none;
+  padding: 0px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+
+  border: 1px none #fff;
+}
+
+.top-menu-elem{
+  position: relative;
+  padding: 10px 0px 5px 0px;
+  margin: 5px 0px 5px 0px;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Folkard";
+
+  border: 1px none #fff;
+}
+
+.top-menu-elem:hover {
+  text-shadow: #00dba0 0px 0px 25px;
 }
 
 .module-header{
@@ -72,17 +110,20 @@ a:hover div{
   grid-template-columns: 3fr 1fr 3fr;
   padding: 20px;
   margin: 20px;
+
+  border: 1px none #fff;
 }
 
 .versus-field {
   display: block;
-  border: 1px solid black;
   padding: 20px;
   padding-top: 120px;
   margin: 20px;
   text-align: center;
   border-style: none;
   font-size: 1.6em;
+
+  border: 1px none #fff;
 }
 
 .navigation-buttons-menu {
@@ -121,6 +162,8 @@ a:hover div{
     grid-template-columns: 1fr;
     grid-gap: 40px;
     padding: 50px 150px;
+
+    border: 1px none #fff;
 }
 
 .main-page-elem {
@@ -143,6 +186,8 @@ a .main-page-elem:hover {
 .players-info-list, .games-info-list, .player-in-game-info-list {
   margin: 20px 100px 20px 100px;
   display: block;
+
+  border: 1px none #fff;
 }
 
 .player-info, .game-info, .player-in-game-info {
@@ -159,27 +204,36 @@ a .main-page-elem:hover {
 
 .player-in-game-elem {
   text-align: center;
-  border: 1px none #00dba0;
+
+  border: 1px none #fff;
 }
 
 .game-name {
   text-align: left;
-  border: 1px none #00dba0;
+
+  border: 1px none #fff;
 }
 
 .game-date{
   text-align: right;
-  border: 1px none #00dba0;
+
+  border: 1px none #fff;
 }
 
 .player-nickname{
   text-align: left;
-  border: 1px none #00dba0;
+
+  border: 1px none #fff;
 }
 
 .player-pts{
   text-align: center;
-  border: 1px none #00dba0;
+
+  border: 1px none #fff;
+}
+
+.debug{
+
 }
 
 #logo-title-prototype{
