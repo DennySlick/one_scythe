@@ -95,10 +95,12 @@ a:hover div{
 .nav-login{
   display: block;
   /*grid-template-columns: 1fr 1fr;*/
+  min-width: 180px;
   text-align: right;
   list-style-type: none;
   padding: 0px 0px 5px 5px;
   margin: 0px 0px 25px 10px;
+  background-image: url("../image/metall_square.png");
 
   border: 1px solid #00dba0;
   border-radius: 10px;
@@ -109,10 +111,12 @@ a:hover div{
   display: block;
 
   padding: 10px 10px 10px 10px;
-  margin: 5px 0px 5px 0px;
+  margin: 2px 15px 2px 0px;
   text-align: right;
   font-size: 1em;
   font-family: "FRIZQT";
+  color: #fff;
+  text-shadow: #00dba0 0px 0px 25px;
 
   border: 1px none #fff;
 }
@@ -120,10 +124,20 @@ a:hover div{
 .nav-login-elem > form > button{
   font-size: 1em;
   font-family: "FRIZQT";
+  color: #fff;
+  text-shadow: #00dba0 0px 0px 25px;
 }
 
-.nav-login-elem > a:hover,button:hover {
+.nav-login-elem > a{
+  font-size: 1em;
+  font-family: "FRIZQT";
+  color: #fff;
   text-shadow: #00dba0 0px 0px 25px;
+}
+
+.nav-login-elem > a:hover, form > button:hover {
+  /*text-shadow: #00dba0 0px 0px 25px;*/
+  text-shadow: #0f121f 0px 10px 10px;
 }
 
 nav{
@@ -208,7 +222,7 @@ nav button{
     border: 2px solid #00dba0;
     box-shadow: none;
     transform: translateY(2px);
-  }
+}
 
 .main-page-menu{
     display: grid;
@@ -315,6 +329,7 @@ a .main-page-elem:hover {
     margin-top: 60px;
     border: 1px solid #00dba0;
     padding: 20px;
+    font-family: "FRIZQT";
 }
 
 .site-form input, .site-form textarea{
@@ -324,12 +339,39 @@ a .main-page-elem:hover {
 }
 
 .site-form input[type="submit"]{
-    background: #00dba0;
-    border: 0;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 4px;
-    margin: 10px 0;
+  background-color: #009970;
+  border-radius: 10px;
+  border: 2px solid #00dba0;
+  text-align: center;
+  color: #fff;
+  font-size: 1em;
+  margin: 1 0px 0px;
+  padding: 10px 15px;
+  box-shadow: 2px 2px #00dba0;
+  font-family: "FRIZQT";
+}
+
+.site-form input[type="submit"]:hover {
+  background-color: #00dba0;
+  border: 2px solid #009970;
+  box-shadow: 2px 2px #009970;
+}
+
+.site-form input[type="submit"]:active {
+    background-color: #009970;
+    border: 2px solid #00dba0;
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+
+
+#id_password {
+  margin: 10px 0px 15px 0px;
+}
+
+#id_username {
+  margin: 10px 0px 15px 0px;
 }
 
 #logo-title-prototype{

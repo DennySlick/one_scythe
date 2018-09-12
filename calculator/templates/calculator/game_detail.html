@@ -16,7 +16,7 @@
   <h2>
     Winner: {{game.winner}}
   </h2>
-  
+
   <div class="debug">
     <!-- DEBUG -->
     {% if False %}
@@ -52,9 +52,13 @@
           </p>
           <p class="player-in-game-elem">
             {% if game.winner == side.grouper %}
-              +{{player_info.pts_dif}}
+              <span class="player-wins">
+                +{{player_info.pts_dif}}
+              </span>
             {% elif game.winner != 'Draw' %}
-              {{player_info.pts_dif}}
+              <span class="player-loses">
+                {{player_info.pts_dif}}
+              </span>
             {% else %}
               0
             {% endif %}

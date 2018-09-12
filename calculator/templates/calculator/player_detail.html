@@ -39,11 +39,15 @@
           </p>
           <p class="player-in-game-elem">
             {% if game_info.side == game_info.game.winner %}
-              +{{ game_info.pts_dif }}
+              <span class="player-wins">
+                +{{ game_info.pts_dif }}
+              </span>
             {% elif game_info.game.winner == 'Draw' %}
               0
             {% else %}
-              {{ game_info.pts_dif }}
+              <span class="player-loses">
+                {{ game_info.pts_dif }}
+              </span>
             {% endif %}
           </p>
           <p class="game-date">
