@@ -11,30 +11,56 @@
 
 	<body>
     <div class="wrapper">
+
 			<div class="header">
+
 				<div class="logo">
 					<a href="{% url 'home' %}">
 						<img src="{% static 'image/one_scythe_league_62.png' %}">
 					</a>
 				</div>
 
-				<ul class="top-menu">
-					<a href="{% url 'calculator:players_list' %}">
-				    <li class="top-menu-elem">
-				      Players
-				    </li>
-				  </a>
-					<a href="{% url 'calculator:games_list' %}">
-						<li class="top-menu-elem">
-							Games
-						</li>
-					</a>
-					<a href="{% url 'calculator:balance_calculator' %}">
-						<li class="top-menu-elem">
-							Calculator
-						</li>
-					</a>
-				</ul>
+				<div>
+
+					<nav>
+						<ul class="nav-menu">
+							<a href="{% url 'calculator:players_list' %}">
+						    <li class="nav-menu-elem">
+						      Players
+						    </li>
+						  </a>
+							<a href="{% url 'calculator:games_list' %}">
+								<li class="nav-menu-elem">
+									Games
+								</li>
+							</a>
+							<a href="{% url 'calculator:balance_calculator' %}">
+								<li class="nav-menu-elem">
+									Calculator
+								</li>
+							</a>
+						</ul>
+					</nav>
+
+				</div>
+				<div>
+					<nav>
+						<ul class="nav-login">
+								{% if user.is_authenticated %}
+								<li class="nav-login-elem">Hello, {{user}}</li>
+								<li class="nav-login-elem">
+										<form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+												{% csrf_token %}
+												<button type="submit">Logout</button>
+										</form>
+								</li>
+								{% else %}
+								<li class="nav-login-elem"><a href="{% url 'accounts:login' %}">Login</a></li>
+								<li class="nav-login-elem"><a href="{% url 'accounts:signup' %}">Signup</a></li>
+								{% endif %}
+						</ul>
+					</nav>
+				</div>
 
 			</div>
 			<div class="content">

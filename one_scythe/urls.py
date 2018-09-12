@@ -10,6 +10,7 @@ from . import views as main_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('accounts.urls')),
     url(r'^', include('calculator.urls')),
     url(r'^$', main_views.homepage, name="home"),
 ]

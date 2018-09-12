@@ -56,7 +56,7 @@ a:hover div{
 
 .header{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 4fr 2fr 1fr;
   margin: 20px 20px 40px 20px;
 
   border: 1px none #fff;
@@ -66,20 +66,21 @@ a:hover div{
   border: 1px none #fff;
 }
 
-.top-menu{
+.nav-menu{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style-type: none;
+  text-align: center;
   padding: 0px 5px 5px 5px;
   margin: 5px 5px 5px 5px;
 
   border: 1px none #fff;
 }
 
-.top-menu-elem{
+.nav-menu-elem{
   position: relative;
   padding: 10px 0px 5px 0px;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 20px 5px 0px;
   text-align: center;
   font-size: 1.2em;
   font-family: "Folkard";
@@ -87,8 +88,60 @@ a:hover div{
   border: 1px none #fff;
 }
 
-.top-menu-elem:hover {
+.nav-menu-elem:hover {
   text-shadow: #00dba0 0px 0px 25px;
+}
+
+.nav-login{
+  display: block;
+  /*grid-template-columns: 1fr 1fr;*/
+  text-align: right;
+  list-style-type: none;
+  padding: 0px 0px 5px 5px;
+  margin: 0px 0px 25px 10px;
+
+  border: 1px solid #00dba0;
+  border-radius: 10px;
+}
+
+.nav-login-elem{
+  position: relative;
+  display: block;
+
+  padding: 10px 10px 10px 10px;
+  margin: 5px 0px 5px 0px;
+  text-align: right;
+  font-size: 1em;
+  font-family: "FRIZQT";
+
+  border: 1px none #fff;
+}
+
+.nav-login-elem > form > button{
+  font-size: 1em;
+  font-family: "FRIZQT";
+}
+
+.nav-login-elem > a:hover,button:hover {
+  text-shadow: #00dba0 0px 0px 25px;
+}
+
+nav{
+    justify-self: end;
+}
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+nav button{
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 16px;
 }
 
 .module-header{
@@ -256,6 +309,27 @@ a .main-page-elem:hover {
 
 .debug{
 
+}
+
+.site-form {
+    margin-top: 60px;
+    border: 1px solid #00dba0;
+    padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 20px 0 0px 0;
+    padding: 10px;
+}
+
+.site-form input[type="submit"]{
+    background: #00dba0;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 10px 0;
 }
 
 #logo-title-prototype{
