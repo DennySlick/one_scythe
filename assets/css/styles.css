@@ -198,6 +198,10 @@ a .main-page-elem:hover {
   margin: 10px;
 }
 
+.player-info{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .player-in-game-info {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -220,6 +224,12 @@ a .main-page-elem:hover {
   border: 1px none #fff;
 }
 
+.player-elem {
+  text-align: center;
+
+  border: 1px none #fff;
+}
+
 .player-nickname{
   text-align: left;
 
@@ -228,6 +238,18 @@ a .main-page-elem:hover {
 
 .player-pts{
   text-align: center;
+
+  border: 1px none #fff;
+}
+
+.player-wins {
+  color: green;
+
+  border: 1px none #fff;
+}
+
+.player-loses {
+  color:red;
 
   border: 1px none #fff;
 }

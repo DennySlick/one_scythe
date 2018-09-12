@@ -41,6 +41,7 @@ class GameAdmin(admin.ModelAdmin):
 
 class PlayerAdmin(admin.ModelAdmin):
     inlines = (PlayerInGameInline,)
+    exclude = ['wins', 'loses']
     list_display = ('nickname', 'pts')
 
 

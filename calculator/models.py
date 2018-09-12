@@ -16,6 +16,9 @@ class Player(models.Model):
     nickname = models.CharField(max_length=25)
     pts = models.IntegerField(default=1000)
 
+    wins = models.IntegerField(default=0)
+    loses = models.IntegerField(default=0)
+
     class Meta:
         ordering = ['-pts', 'nickname']
 
@@ -126,9 +129,11 @@ class PlayerInGame(models.Model):
             pass
 
     def change_player_pts(self):
-        if (int(self.pts_dif) >= 0):
+        if self.pts_dif >= 0:
+            self.player.wins += 1
             debug_output("CHANGE PLAYER PTS: " + str(self.player) + " +" + str(self.pts_dif))
         else:
+            self.player.loses += 1
             debug_output("CHANGE PLAYER PTS: " + str(self.player) + " " + str(self.pts_dif))
         self.player.pts += self.pts_dif
         self.player.save()
